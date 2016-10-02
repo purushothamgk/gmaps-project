@@ -51,7 +51,8 @@ export class AppComponent {
               data => {
                     console.log('Success ', data);
                     this.directionsDisplay.setDirections(data);
-                    this.directionsDisplay.setMap(this.map)
+                    this.directionsDisplay.setMap(this.map);
+                    this.directionsDisplay.setPanel(document.getElementById('directionsList'));
               },
               error => {
                   console.log('Error in fetching accounts ', error);
